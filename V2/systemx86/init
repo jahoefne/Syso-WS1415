@@ -1,0 +1,28 @@
+#!/bin/busybox sh
+
+# create links for all busybox commands
+for i in $(/bin/busybox --list)
+ do
+   ln -s /bin/busybox /bin/$i
+   ln -s /bin/busybox /sbin/$i
+   
+done
+
+echo "Mounting Stuff"
+mount -t proc none /proc
+mont -t sysfs none /sys
+mount -t tmpfs -o size=10 tmpfs/tmp
+
+echo "Starting mdev"
+mdev -s
+
+# execut custom initprogramm (sysinfo)
+/usr/bin/main
+ifconfig  eth0 up
+udhcpc -i eth0 -s /usr/share/udhcpc/sample.script
+httpd -h /www/ &
+
+
+# execute sh to 
+exec /bin/sh
+exit 0

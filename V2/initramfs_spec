@@ -1,0 +1,39 @@
+# directory structure
+dir /proc 755 0 0
+dir /sys 755 0 0
+dir /dev 755 0 0
+nod /dev/console 644 0 0 c 5 1
+dir /sbin 755 0 0
+dir /bin 755 0 0
+dir /usr 755 0 0
+dir /usr/share 755 0 0
+dir /usr/bin 755 0 0
+dir /usr/share/udhcpc 755 0 0
+dir /etc 755 0 0
+dir /var 755 0 0
+dir /tmp 755 0 0
+dir /www 755 0 0
+dir /www/cgi-bin 755 0 0
+
+slink /bin/sh /bin/busybox 777 0 0
+slink /bin/ln /bin/busybox 777 0 0
+
+file /bin/busybox ./systemx86/bin/busybox 755 0 0
+file /usr/bin/main ./systemx86/bin/main 755 0 0
+file /init ./systemx86/init 755 0 0
+
+file /www/index.html ./systemx86/www/index.html 755 0 0
+file /www/cgi-bin/cpuinfo.sh ./systemx86/www/cgi-bin/cpuinfo.sh 755 0 0
+file /www/cgi-bin/deletetmp.sh ./systemx86/www/cgi-bin/deletetmp.sh 755 0 0
+file /www/cgi-bin/ifconfig.sh ./systemx86/www/cgi-bin/ifconfig.sh 755 0 0
+file /www/cgi-bin/uptime.sh ./systemx86/www/cgi-bin/uptime.sh 755 0 0
+file /www/cgi-bin/sysinfo.sh ./systemx86/www/cgi-bin/sysinfo.sh 755 0 0
+
+
+file /usr/share/udhcpc/sample.bound ./systemx86/usr/share/udhcpc/sample.bound 755 0 0
+file /usr/share/udhcpc/sample.deconfig ./systemx86/usr/share/udhcpc/sample.deconfig 755 0 0
+file /usr/share/udhcpc/sample.nak ./systemx86/usr/share/udhcpc/sample.nak 755 0 0
+file /usr/share/udhcpc/sample.renew ./systemx86/usr/share/udhcpc/sample.renew 755 0 0
+file /usr/share/udhcpc/sample.script ./systemx86/usr/share/udhcpc/sample.script 755 0 0
+file /usr/share/udhcpc/udhcpd.conf ./systemx86/usr/share/udhcpc/udhcpd.conf 755 0 0
+
