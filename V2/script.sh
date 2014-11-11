@@ -3,6 +3,8 @@
 # tar -xf linux-3.17.1.tar.gz ../
 # rm linux-3.17.1.tar.gz
 
+cp -r ./systemx86 ../../linux-3.17.1
+
 # move our config file to the downloaded kernel
 cp ./config.config ../../linux-3.17.1/
 mv ../../linux-3.17.1/config.config ../../linux-3.17.1/.config
