@@ -1,14 +1,17 @@
-#!/bin/sh
+#!/bin/busybox sh
 
 # create links for all busybox commands
-cd /bin
-for i in $(busybox --list)
+#cd /bin
+for i in $(/bin/busybox --list)
  do
-   ln -f -s busybox $i
+   ln -s /bin/busybox /bin/$i
 done
+
+#echo "42"
 
 # execut custom initprogramm (sysinfo)
 /usr/bin/main
 
 # execute sh to 
 exec /bin/sh
+exit 0
