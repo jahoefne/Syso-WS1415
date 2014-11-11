@@ -10,18 +10,14 @@ dir /usr/bin 755 0 0
 dir /etc 755 0 0
 dir /var 755 0 0
 dir /tmp 755 0 0
+dir /lib 755 0 0
+dir /www 755 0 0
+dir /www/cgi-bin 755 0 0
 
-#links
-slink /bin/sh /bin/busybox 777 0 0
-slink /bin/ln /bin/busybox 777 0 0
+file /bin/busybox ./systemx86/bin/busybox 755 1000 1000
+file /usr/bin/main ./systemx86/bin/main 755 1000 1000
+file /init ./systemx86/init 755 1000 1000
 
-
-
-#busybox
-file /bin/busybox ./systemx86/bin/busybox 755 0 0
-
-#sysinfo
-file /usr/bin/main ./systemx86/bin/main 755 0 0
-
-#initscript
-file /init ./systemx86/usr/init 755 0 0
+slink /bin/cd /bin/busybox 777 1000 1000
+slink /bin/sh /bin/busybox 777 1000 1000
+slink /bin/ln /bin/busybox 777 1000 1000
