@@ -8,9 +8,12 @@ for i in $(/bin/busybox --list)
    
 done
 
+echo "Mounting Stuff"
 mount -t proc none /proc
 mont -t sysfs none /sys
 mount -t tmpfs -o size=10 tmpfs/tmp
+
+echo "Starting mdev"
 mdev -s
 
 # execut custom initprogramm (sysinfo)

@@ -22,4 +22,4 @@ cd ../linux-3.17.1
 ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-buildroot-linux-uclibcgnueabihf-4.9.1/bin/arm-buildroot-linux-uclibcgnueabihf- make -j 4
 
 # boot kernel with qemu
-qemu-system-arm -kernel arch/arm/boot/zImage -machine vexpress-a9  -net nic,macaddr=00:11:25:23:42:55 -net vde,sock=/tmp/vde2-tap0.ctl -append "console=tty1"
+qemu-system-arm -kernel arch/arm/boot/zImage -nographic -machine vexpress-a9  -net nic,macaddr=00:11:25:23:42:55 -net vde,sock=/tmp/vde2-tap0.ctl -append "console=ttyAMA0"
