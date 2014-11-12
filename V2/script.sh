@@ -1,50 +1,82 @@
-download=dl
-copyinitramfs=ci
-moveconfig=mc
-compilebusybox=cb
-compilekernel=ck
-bootqemu=bq
-parameter=$1
+ 
+downloadLinuxSource(){
+ echo "======================================================"
+ echo "= Downloading Linux Kernel Sources + Busybox Sources ="
+ echo "======================================================"
+ wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.17.1.tar.xz
+ tar xC ../../ -f linux-3.17.1.tar.xz
+ rm linux-3.17.1.tar.xz
+ wget http://busybox.net/downloads/busybox-1.22.1.tar.bz2
+ tar xC ../../ -f busybox-1.22.1.tar.bz2
+ rm busybox-1.22.1.tar.bz2;
+}
 
-#if [ -z $parameter ] || [ $parameter = $download ]; then
-# download kernel-src
-# wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.17.1.tar.xz
-# tar -xf linux-3.17.1.tar.gz ../
-# rm linux-3.17.1.tar.gz
-#fi
+compileBusyBox(){
+ echo "============================="
+ echo "= Compiling Busybox for ARM ="
+ echo "============================="
+ cp busybox.config ../../busybox-1.22.1/.config
+ cd ../../busybox-1.22.1
+ ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-buildroot-linux-uclibcgnueabihf-4.9.1/bin/arm-buildroot-linux-uclibcgnueabihf- make
+ cp ./busybox ../syso/V2/systemx86/bin
+ cd ../syso/V2;
+}
 
-if [ -z $parameter ] || [ $parameter = $copyinitramfs ]; then
-# copy initramfs folder
-cp -r ./systemx86 ../../linux-3.17.1
-fi
+compileKernel(){
+ echo "=========================="
+ echo "= Compiling Linux Kernel ="
+ echo "=========================="
+ echo " => Copying Initramfs-folder to Source Folder"
+ cp -r ./systemx86 ../../linux-3.17.1
+ 
+ echo " => Copying .config to Source Folder"
+ cp ./config.config ../../linux-3.17.1/.config
+ 
+ echo " => Compiling Linux Kernel"
+ cd ../../linux-3.17.1
+  make clean
+ ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-buildroot-linux-uclibcgnueabihf-4.9.1/bin/arm-buildroot-linux-uclibcgnueabihf- make -j 4
+ cd ../syso/V2;
+}
 
-if [ -z $parameter ] || [ $parameter = $moveconfig ]; then
-# move our config file to the downloaded kernel
-cp ./config.config ../../linux-3.17.1/.config
-fi
+bootKernel(){
+ echo "=============================" 
+ echo "= Starting Kernel with Qemu ="
+ echo "============================="
+ cd ../../linux-3.17.1
+ qemu-system-arm -kernel arch/arm/boot/zImage -nographic -machine vexpress-a9  -net nic,macaddr=00:11:25:23:42:55 -net vde,sock=/tmp/vde2-tap0.ctl -append "console=ttyAMA0";
+}
 
-if [ -z $parameter ] || [ $parameter = $compilebusybox ]; then
-# compile busybox for arm
-cp busybox.config ../../busybox-1.22.1/.config
-cd ../../busybox-1.22.1
-ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-buildroot-linux-uclibcgnueabihf-4.9.1/bin/arm-buildroot-linux-uclibcgnueabihf- make
-cp ./busybox ../syso/V2/systemx86/bin
-fi
+while :; do
+  case $1 in
+    -dl)
+      downloadLinuxSource
+      ;;
+    -buildbb)
+      compileBusyBox
+      ;;
+    -buildlinux)
+      compileKernel
+      ;;
+    -boot)
+     bootKernel
+     ;;
 
-if [ -z $parameter ] || [ $parameter = $compilekernel ]; then
-# compile kernel
-cd ../linux-3.17.1
+    -h|-help)echo "Parameters:"
+      echo "-dl Download Linux/Busybox Source"
+      echo "-buildbb Build BusyBox"
+      echo "-buildlinux Build the Linux Source"
+      echo "-boot boot the Kernel"
+     ;;
 
-# make clean
-ARCH=arm CROSS_COMPILE=/opt/toolchains/arm-buildroot-linux-uclibcgnueabihf-4.9.1/bin/arm-buildroot-linux-uclibcgnueabihf- make -j 4
-fi
+    --)
+       shift
+       break
+       ;;
 
-if [ $parameter = $bootqemu ]
-then
-cd ../../linux-3.17.1
-fi
+    *)
+     break;;
 
-if [ -z $parameter ] || [ $parameter = $bootqemu ]; then
-# boot kernel with qemu
-qemu-system-arm -kernel arch/arm/boot/zImage -nographic -machine vexpress-a9  -net nic,macaddr=00:11:25:23:42:55 -net vde,sock=/tmp/vde2-tap0.ctl -append "console=ttyAMA0"
-fi
+  esac
+  shift
+done
