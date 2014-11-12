@@ -3,10 +3,10 @@ downloadLinuxSource(){
  echo "======================================================"
  echo "= Downloading Linux Kernel Sources + Busybox Sources ="
  echo "======================================================"
- wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.17.1.tar.xz
+ wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.17.1.tar.xz > /dev/null 2>&1
  tar xC ../../ -f linux-3.17.1.tar.xz
  rm linux-3.17.1.tar.xz
- wget http://busybox.net/downloads/busybox-1.22.1.tar.bz2
+ wget http://busybox.net/downloads/busybox-1.22.1.tar.bz2 > /dev/null 2>&1
  tar xC ../../ -f busybox-1.22.1.tar.bz2
  rm busybox-1.22.1.tar.bz2;
 }
@@ -49,6 +49,12 @@ bootKernel(){
 
 while :; do
   case $1 in
+    -all)
+      downloadLinuxSource
+      compileBusyBox
+      compileKernel
+      bootKernel
+      ;;
     -dl)
       downloadLinuxSource
       ;;
@@ -63,6 +69,7 @@ while :; do
      ;;
 
     -h|-help)echo "Parameters:"
+      echo "-all Do all tasks"
       echo "-dl Download Linux/Busybox Source"
       echo "-buildbb Build BusyBox"
       echo "-buildlinux Build the Linux Source"
