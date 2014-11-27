@@ -1,0 +1,70 @@
+<html>
+<head>
+	<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/cyborg/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<script>
+		function getInfo(script){
+			$.post(script, function(resp){
+				$('#data').html(resp);
+			});
+		}
+		
+		function switchLed(){
+			$.post('cgi-bin/ledSwitch.sh', function(resp){
+			});
+		}
+		
+		function buttonAndLedState(){
+	    	$.post('cgi-bin/ledStatus.sh', function(resp){
+				// button pressed
+				$("#ledfield").css("background","#ff0000");
+			}).fail(function(){
+				$("#ledfield").css("background","#202020");
+			});
+		
+	    	$.post('cgi-bin/btnStatus.sh', function(resp){
+				// button pressed
+				$("#btnfield").css("background","#ff0000");
+				buttonAndLedState();
+			}).fail(function(){
+				$("#btnfield").css("background","#202020");
+				buttonAndLedState();
+			});
+			
+		}
+		buttonAndLedState();
+	</script>
+</head>
+
+
+<body align="center" class="container">
+	
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <button class="btn btn-default navbar-btn" onclick="getInfo('cgi-bin/cpuinfo.sh');" >CpuInfo</button>
+		<button class="btn btn-default navbar-btn" onclick="getInfo('cgi-bin/ifconfig.sh');" >Ifconfig</button>
+		<button class="btn btn-default navbar-btn" onclick="getInfo('cgi-bin/sysinfo.sh');" >Sysinfo</button>
+		<button class="btn btn-default navbar-btn" onclick="getInfo('cgi-bin/uptime.sh');" >Uptime</button>
+		<button class="btn btn-default navbar-btn" onclick="getInfo('cgi-bin/deletetmp.sh');" >Delete Tmp</button>
+      </a>
+    </div>
+  </div>
+</nav>
+<div id="data" class="well">
+
+<div id="ledbutton" class="well">
+	<div id="button">
+		Button:<div id="btnfield" onclick="switchLed();" style="width:20px;height:20px; background:#202020;"></div>
+	</div>
+	<div id="led">
+		LED:<div id="ledfield" style="width:20px;height:20px; background:#101010;"></div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>

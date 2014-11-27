@@ -1,0 +1,38 @@
+# directory structure
+dir /proc 755 0 0
+dir /sys 755 0 0
+dir /dev 755 0 0
+nod /dev/console 644 0 0 c 5 1
+dir /sbin 755 0 0
+dir /bin 755 0 0
+dir /usr 755 0 0
+dir /usr/share 755 0 0
+dir /usr/bin 755 0 0
+dir /usr/share/udhcpc 755 0 0
+dir /etc 755 0 0
+dir /var 755 0 0
+dir /tmp 755 0 0
+dir /www 755 0 0
+dir /www/cgi-bin 755 0 0
+
+slink /bin/sh /bin/busybox 777 0 0
+slink /bin/ln /bin/busybox 777 0 0
+
+file /bin/busybox home/jahoefne/syso/v3/systemx86/bin/busybox 755 0 0
+file /usr/bin/main home/jahoefne/syso/v3/systemx86/bin/main 755 0 0
+file /init home/jahoefne/syso/v3/systemx86/init 755 0 0
+
+file /www/index.html home/jahoefne/syso/v3/systemx86/www/index.html 755 0 0
+file /www/cgi-bin/cpuinfo.sh home/jahoefne/syso/v3/systemx86/www/cgi-bin/cpuinfo.sh 755 0 0
+file /www/cgi-bin/deletetmp.sh home/jahoefne/syso/v3/systemx86/www/cgi-bin/deletetmp.sh 755 0 0
+file /www/cgi-bin/ifconfig.sh home/jahoefne/syso/v3/systemx86/www/cgi-bin/ifconfig.sh 755 0 0
+file /www/cgi-bin/uptime.sh home/jahoefne/syso/v3/systemx86/www/cgi-bin/uptime.sh 755 0 0
+file /www/cgi-bin/sysinfo.sh home/jahoefne/syso/v3/systemx86/www/cgi-bin/sysinfo.sh 755 0 0
+
+
+file /usr/share/udhcpc/sample.bound home/jahoefne/syso/v3/systemx86/usr/share/udhcpc/sample.bound 755 0 0
+file /usr/share/udhcpc/sample.deconfig home/jahoefne/syso/v3/systemx86/usr/share/udhcpc/sample.deconfig 755 0 0
+file /usr/share/udhcpc/sample.nak home/jahoefne/syso/v3/systemx86/usr/share/udhcpc/sample.nak 755 0 0
+file /usr/share/udhcpc/sample.renew home/jahoefne/syso/v3/systemx86/usr/share/udhcpc/sample.renew 755 0 0
+file /usr/share/udhcpc/sample.script home/jahoefne/syso/v3/systemx86/usr/share/udhcpc/sample.script 755 0 0
+file /usr/share/udhcpc/udhcpd.conf home/jahoefne/syso/v3/systemx86/usr/share/udhcpc/udhcpd.conf 755 0 0
