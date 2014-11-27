@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LED5
+	bool "led5"
+	help
+	  LED5 programm

@@ -1,0 +1,1251 @@
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+configure: WARNING: using bundled zlib
+ccache.c: In function ‘ccache_main’:
+ccache.c:2225:4: warning: too many arguments for format [-Wformat-extra-args]
+    cache_dir = format("/home/jahoefne/.buildroot-ccache", home_directory);
+    ^
+coreutils/catv.c: In function ‘catv_main’:
+coreutils/catv.c:32:15: warning: typedef ‘BUG_const_mismatch’ locally defined but not used [-Wunused-local-typedefs]
+  typedef char BUG_const_mismatch[
+               ^
+procps/top.c:188:38: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  char BUG_G_too_big[sizeof(G) <= COMMON_BUFSIZE ? 1 : -1];
+                                      ^
+procps/top.c: In function ‘mult_lvl_cmp’:
+procps/top.c:257:26: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cmp_val = (*sort_function[i])(a, b);
+                          ^
+procps/top.c:261:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  return inverted ? -cmp_val : cmp_val;
+                    ^
+procps/top.c: In function ‘read_cpu_jiffy’:
+procps/top.c:273:33: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (!fgets(line_buf, LINE_BUF_SIZE, fp) || line_buf[0] != 'c' /* not "cpu" */)
+                                 ^
+procps/top.c:273:107: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (!fgets(line_buf, LINE_BUF_SIZE, fp) || line_buf[0] != 'c' /* not "cpu" */)
+                                                                                                           ^
+procps/top.c:275:26: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  ret = sscanf(line_buf, fmt,
+                          ^
+procps/top.c: In function ‘get_jiffy_counts’:
+procps/top.c:295:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  prev_jif = cur_jif;
+             ^
+procps/top.c:295:66: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  prev_jif = cur_jif;
+                                                                  ^
+procps/top.c:296:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (read_cpu_jiffy(fp, &cur_jif) < 4)
+                                     ^
+procps/top.c:303:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (!smp_cpu_info) {
+                  ^
+procps/top.c:308:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (!num_cpus) {
+                  ^
+procps/top.c:313:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    cpu_jif = xrealloc_vector(cpu_jif, 1, num_cpus);
+               ^
+procps/top.c:313:91: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    cpu_jif = xrealloc_vector(cpu_jif, 1, num_cpus);
+                                                                                           ^
+procps/top.c:313:152: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    cpu_jif = xrealloc_vector(cpu_jif, 1, num_cpus);
+                                                                                                                                                        ^
+procps/top.c:313:221: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    cpu_jif = xrealloc_vector(cpu_jif, 1, num_cpus);
+                                                                                                                                                                                                                             ^
+procps/top.c:314:39: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (read_cpu_jiffy(fp, &cpu_jif[num_cpus]) <= 4)
+                                       ^
+procps/top.c:314:89: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (read_cpu_jiffy(fp, &cpu_jif[num_cpus]) <= 4)
+                                                                                         ^
+procps/top.c:316:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    num_cpus++;
+               ^
+procps/top.c:318:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   if (num_cpus == 0) /* /proc/stat with only "cpu ..." line?! */
+                  ^
+procps/top.c:319:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    smp_cpu_info = 0;
+               ^
+procps/top.c:321:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cpu_prev_jif = xzalloc(sizeof(cpu_prev_jif[0]) * num_cpus);
+              ^
+procps/top.c:321:86: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cpu_prev_jif = xzalloc(sizeof(cpu_prev_jif[0]) * num_cpus);
+                                                                                      ^
+procps/top.c:321:147: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cpu_prev_jif = xzalloc(sizeof(cpu_prev_jif[0]) * num_cpus);
+                                                                                                                                                   ^
+procps/top.c:330:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   tmp = cpu_prev_jif;
+                    ^
+procps/top.c:331:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cpu_prev_jif = cpu_jif;
+              ^
+procps/top.c:331:71: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cpu_prev_jif = cpu_jif;
+                                                                       ^
+procps/top.c:332:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cpu_jif = tmp;
+              ^
+procps/top.c:335:30: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   for (i = 0; i < num_cpus; i++)
+                              ^
+procps/top.c:336:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    read_cpu_jiffy(fp, &cpu_jif[i]);
+                                   ^
+procps/top.c: In function ‘do_stats’:
+procps/top.c:350:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  total_pcpu = 0;
+             ^
+procps/top.c:352:54: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  new_hist = xmalloc(sizeof(new_hist[0]) * ntop);
+                                                      ^
+procps/top.c:358:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  for (n = 0; n < ntop; n++) {
+                             ^
+procps/top.c:359:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   cur = top + n;
+                    ^
+procps/top.c:374:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   if (prev_hist_count) do {
+                  ^
+procps/top.c:375:19: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (prev_hist[i].pid == pid) {
+                   ^
+procps/top.c:376:41: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cur->pcpu = cur->ticks - prev_hist[i].ticks;
+                                         ^
+procps/top.c:377:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     total_pcpu += cur->pcpu;
+                ^
+procps/top.c:380:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    i = (i+1) % prev_hist_count;
+                           ^
+procps/top.c:389:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  free(prev_hist);
+                  ^
+procps/top.c:390:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  prev_hist = new_hist;
+             ^
+procps/top.c:391:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  prev_hist_count = ntop;
+             ^
+procps/top.c:391:73: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  prev_hist_count = ntop;
+                                                                         ^
+procps/top.c: In function ‘display_cpus’:
+procps/top.c:457:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  n_cpu_lines = smp_cpu_info ? num_cpus : 1;
+                           ^
+procps/top.c:457:84: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  n_cpu_lines = smp_cpu_info ? num_cpus : 1;
+                                                                                    ^
+procps/top.c:462:23: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   p_jif = &cpu_jif[i];
+                       ^
+procps/top.c:463:28: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   p_prev_jif = &cpu_prev_jif[i];
+                            ^
+procps/top.c:481:17: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     (smp_cpu_info ? utoa(i) : ""),
+                 ^
+procps/top.c: In function ‘display_process_list’:
+procps/top.c:632:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  busy_jifs = cur_jif.busy - prev_jif.busy;
+                         ^
+procps/top.c:632:82: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  busy_jifs = cur_jif.busy - prev_jif.busy;
+                                                                                  ^
+procps/top.c:635:17: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (total_pcpu < busy_jifs) total_pcpu = busy_jifs;
+                 ^
+procps/top.c:635:83: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (total_pcpu < busy_jifs) total_pcpu = busy_jifs;
+                                                                                   ^
+procps/top.c:653:39: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  tmp_unsigned = (uint16_t)(cur_jif.total - prev_jif.total) * total_pcpu;
+                                       ^
+procps/top.c:653:97: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  tmp_unsigned = (uint16_t)(cur_jif.total - prev_jif.total) * total_pcpu;
+                                                                                                 ^
+procps/top.c:653:157: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  tmp_unsigned = (uint16_t)(cur_jif.total - prev_jif.total) * total_pcpu;
+                                                                                                                                                             ^
+procps/top.c:667:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (lines_rem > ntop - G_scroll_ofs)
+                             ^
+procps/top.c:667:77: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (lines_rem > ntop - G_scroll_ofs)
+                                                                             ^
+procps/top.c:668:26: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   lines_rem = ntop - G_scroll_ofs;
+                          ^
+procps/top.c:668:74: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   lines_rem = ntop - G_scroll_ofs;
+                                                                          ^
+procps/top.c:669:17: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  s = top + G_scroll_ofs;
+                 ^
+procps/top.c:669:64: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  s = top + G_scroll_ofs;
+                                                                ^
+procps/top.c:682:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   col = snprintf(line_buf, scr_width,
+                             ^
+procps/top.c:694:28: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    read_cmdline(line_buf + col, scr_width - col, s->pid, s->comm);
+                            ^
+procps/top.c:695:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   fputs(line_buf, stdout);
+                             ^
+procps/top.c: In function ‘clearmems’:
+procps/top.c:712:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  free(top);
+                  ^
+procps/top.c:713:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  top = NULL;
+             ^
+procps/top.c: In function ‘reset_term’:
+procps/top.c:721:39: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   tcsetattr_stdin_TCSANOW(&initial_settings);
+                                       ^
+procps/top.c:725:19: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   free(prev_hist);
+                   ^
+procps/top.c: In function ‘topmem_sort’:
+procps/top.c:768:62: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  n = offsetof(topmem_status_t, vsz) + (sort_field * sizeof(mem_t));
+                                                              ^
+procps/top.c:778:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  return inverted ? -n : n;
+                    ^
+procps/top.c: In function ‘display_topmem_header’:
+procps/top.c:829:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  snprintf(line_buf, LINE_BUF_SIZE,
+                      ^
+procps/top.c:832:90: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  printf(OPT_BATCH_MODE ? "%.*s\n" : "\033[H\033[J%.*s\n", scr_width, line_buf);
+                                                                                          ^
+procps/top.c:834:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  snprintf(line_buf, LINE_BUF_SIZE,
+                      ^
+procps/top.c:837:41: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  printf("%.*s\n", scr_width, line_buf);
+                                         ^
+procps/top.c:839:22: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  snprintf(line_buf, LINE_BUF_SIZE,
+                      ^
+procps/top.c:842:41: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  printf("%.*s\n", scr_width, line_buf);
+                                         ^
+procps/top.c: In function ‘display_topmem_process_list’:
+procps/top.c:857:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  const topmem_status_t *s = topmem + G_scroll_ofs;
+                                                           ^
+procps/top.c:857:107: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  const topmem_status_t *s = topmem + G_scroll_ofs;
+                                                                                                           ^
+procps/top.c:860:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  strcpy(line_buf, HDR_STR " COMMAND");
+                    ^
+procps/top.c:861:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  line_buf[11 + sort_field * 6] = "^_"[inverted];
+             ^
+procps/top.c:861:69: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  line_buf[11 + sort_field * 6] = "^_"[inverted];
+                                                                     ^
+procps/top.c:861:134: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  line_buf[11 + sort_field * 6] = "^_"[inverted];
+                                                                                                                                      ^
+procps/top.c:862:84: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  printf(OPT_BATCH_MODE ? "%.*s" : "\e[7m%.*s\e[0m", scr_width, line_buf);
+                                                                                    ^
+procps/top.c:865:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (lines_rem > ntop - G_scroll_ofs)
+                             ^
+procps/top.c:865:77: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  if (lines_rem > ntop - G_scroll_ofs)
+                                                                             ^
+procps/top.c:866:26: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   lines_rem = ntop - G_scroll_ofs;
+                          ^
+procps/top.c:866:74: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   lines_rem = ntop - G_scroll_ofs;
+                                                                          ^
+procps/top.c:869:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->pid     , &line_buf[0*6]);
+                                          ^
+procps/top.c:870:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->vsz     , &line_buf[1*6]);
+                                          ^
+procps/top.c:871:44: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->vszrw   , &line_buf[2*6]);
+                                            ^
+procps/top.c:872:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->rss     , &line_buf[3*6]);
+                                          ^
+procps/top.c:873:45: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->rss_sh  , &line_buf[4*6]);
+                                             ^
+procps/top.c:874:44: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->dirty   , &line_buf[5*6]);
+                                            ^
+procps/top.c:875:46: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->dirty_sh, &line_buf[6*6]);
+                                              ^
+procps/top.c:876:44: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ulltoa6_and_space(s->stack   , &line_buf[7*6]);
+                                            ^
+procps/top.c:877:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   line_buf[8*6] = '\0';
+              ^
+procps/top.c:879:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    read_cmdline(&line_buf[8*6], scr_width - MIN_WIDTH, s->pid, s->comm);
+                             ^
+procps/top.c:881:44: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   printf("\n""%.*s", scr_width, line_buf);
+                                            ^
+procps/top.c: In function ‘handle_input’:
+procps/top.c:934:29: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   c = read_key(STDIN_FILENO, G.kbd_input, interval * 1000);
+                             ^
+procps/top.c:942:23: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   if (c == initial_settings.c_cc[VINTR])
+                       ^
+procps/top.c:944:23: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   if (c == initial_settings.c_cc[VEOF])
+                       ^
+procps/top.c:948:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs--;
+              ^
+procps/top.c:952:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs++;
+              ^
+procps/top.c:956:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs = 0;
+              ^
+procps/top.c:960:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs = ntop - G.lines / 2;
+              ^
+procps/top.c:960:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs = ntop - G.lines / 2;
+                                                                   ^
+procps/top.c:960:115: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs = ntop - G.lines / 2;
+                                                                                                                   ^
+procps/top.c:964:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs -= G.lines / 2;
+              ^
+procps/top.c:964:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs -= G.lines / 2;
+                                                                   ^
+procps/top.c:968:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs += G.lines / 2;
+              ^
+procps/top.c:968:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G_scroll_ofs += G.lines / 2;
+                                                                   ^
+procps/top.c:970:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (G_scroll_ofs >= ntop)
+                  ^
+procps/top.c:970:72: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (G_scroll_ofs >= ntop)
+                                                                        ^
+procps/top.c:971:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     G_scroll_ofs = ntop - 1;
+               ^
+procps/top.c:971:68: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     G_scroll_ofs = ntop - 1;
+                                                                    ^
+procps/top.c:972:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (G_scroll_ofs < 0)
+                  ^
+procps/top.c:973:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     G_scroll_ofs = 0;
+               ^
+procps/top.c:983:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[0] = pid_sort;
+               ^
+procps/top.c:988:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[0] = mem_sort;
+               ^
+procps/top.c:990:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[1] = pcpu_sort;
+               ^
+procps/top.c:991:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[2] = time_sort;
+               ^
+procps/top.c:1006:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[0] = pcpu_sort;
+               ^
+procps/top.c:1007:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[1] = mem_sort;
+               ^
+procps/top.c:1008:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[2] = time_sort;
+               ^
+procps/top.c:1013:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[0] = time_sort;
+               ^
+procps/top.c:1014:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[1] = mem_sort;
+               ^
+procps/top.c:1015:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_function[2] = pcpu_sort;
+               ^
+procps/top.c:1021:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    free(prev_hist);
+                    ^
+procps/top.c:1022:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    prev_hist = NULL;
+               ^
+procps/top.c:1023:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    prev_hist_count = 0;
+               ^
+procps/top.c:1024:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_field = (sort_field + 1) % NUM_SORT_FIELD;
+               ^
+procps/top.c:1024:71: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    sort_field = (sort_field + 1) % NUM_SORT_FIELD;
+                                                                       ^
+procps/top.c:1029:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    inverted ^= 1;
+               ^
+procps/top.c:1036:19: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (smp_cpu_info) {
+                   ^
+procps/top.c:1037:21: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     free(cpu_prev_jif);
+                     ^
+procps/top.c:1038:21: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     free(cpu_jif);
+                     ^
+procps/top.c:1039:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cpu_jif = &cur_jif;
+                ^
+procps/top.c:1039:69: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cpu_jif = &cur_jif;
+                                                                     ^
+procps/top.c:1040:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cpu_prev_jif = &prev_jif;
+                ^
+procps/top.c:1040:74: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cpu_prev_jif = &prev_jif;
+                                                                          ^
+procps/top.c:1043:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cpu_jif = cpu_prev_jif = NULL;
+                ^
+procps/top.c:1043:68: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     cpu_jif = cpu_prev_jif = NULL;
+                                                                    ^
+procps/top.c:1045:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    num_cpus = 0;
+               ^
+procps/top.c:1046:15: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    smp_cpu_info = !smp_cpu_info;
+               ^
+procps/top.c:1046:73: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    smp_cpu_info = !smp_cpu_info;
+                                                                         ^
+procps/top.c:920:16: warning: variable ‘pfd’ set but not used [-Wunused-but-set-variable]
+  struct pollfd pfd[1];
+                ^
+procps/top.c: In function ‘top_main’:
+procps/top.c:1127:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  cpu_jif = &cur_jif;
+             ^
+procps/top.c:1127:66: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  cpu_jif = &cur_jif;
+                                                                  ^
+procps/top.c:1128:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  cpu_prev_jif = &prev_jif;
+             ^
+procps/top.c:1128:71: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  cpu_prev_jif = &prev_jif;
+                                                                       ^
+procps/top.c:1156:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  sort_function[0] = pcpu_sort;
+             ^
+procps/top.c:1157:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  sort_function[1] = mem_sort;
+             ^
+procps/top.c:1158:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  sort_function[2] = time_sort;
+             ^
+procps/top.c:1168:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   tcgetattr(0, (void *) &initial_settings);
+                                     ^
+procps/top.c:1169:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   memcpy(&new_settings, &initial_settings, sizeof(new_settings));
+                                     ^
+procps/top.c:1185:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G.lines = INT_MAX;
+              ^
+procps/top.c:1188:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    G.lines = 24; /* default */
+              ^
+procps/top.c:1192:50: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    get_terminal_width_height(STDOUT_FILENO, &col, &G.lines);
+                                                  ^
+procps/top.c:1193:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (G.lines < 5 || col < 10) {
+                  ^
+procps/top.c:1203:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ntop = 0;
+              ^
+procps/top.c:1210:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     n = ntop;
+                    ^
+procps/top.c:1211:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(top, 6, ntop++);
+                ^
+procps/top.c:1211:88: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(top, 6, ntop++);
+                                                                                        ^
+procps/top.c:1211:145: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(top, 6, ntop++);
+                                                                                                                                                 ^
+procps/top.c:1211:210: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(top, 6, ntop++);
+                                                                                                                                                                                                                  ^
+procps/top.c:1212:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top[n].pid = p->pid;
+                ^
+procps/top.c:1213:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top[n].ppid = p->ppid;
+                ^
+procps/top.c:1214:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top[n].vsz = p->vsz;
+                ^
+procps/top.c:1216:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top[n].ticks = p->stime + p->utime;
+                ^
+procps/top.c:1218:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top[n].uid = p->uid;
+                ^
+procps/top.c:1219:23: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     strcpy(top[n].state, p->state);
+                       ^
+procps/top.c:1220:23: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     strcpy(top[n].comm, p->comm);
+                       ^
+procps/top.c:1222:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top[n].last_seen_on_cpu = p->last_seen_on_cpu;
+                ^
+procps/top.c:1229:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     n = ntop;
+                    ^
+procps/top.c:1231:16: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(topmem, 6, ntop++);
+                ^
+procps/top.c:1231:107: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(topmem, 6, ntop++);
+                                                                                                           ^
+procps/top.c:1231:184: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(topmem, 6, ntop++);
+                                                                                                                                                                                        ^
+procps/top.c:1231:250: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     top = xrealloc_vector(topmem, 6, ntop++);
+                                                                                                                                                                                                                                                          ^
+procps/top.c:1232:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     strcpy(topmem[n].comm, p->comm);
+                                          ^
+procps/top.c:1233:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].pid      = p->pid;
+                                   ^
+procps/top.c:1234:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].vsz      = p->smaps.mapped_rw + p->smaps.mapped_ro;
+                                   ^
+procps/top.c:1235:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].vszrw    = p->smaps.mapped_rw;
+                                   ^
+procps/top.c:1236:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].rss_sh   = p->smaps.shared_clean + p->smaps.shared_dirty;
+                                   ^
+procps/top.c:1237:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].rss      = p->smaps.private_clean + p->smaps.private_dirty + topmem[n].rss_sh;
+                                   ^
+procps/top.c:1237:160: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].rss      = p->smaps.private_clean + p->smaps.private_dirty + topmem[n].rss_sh;
+                                                                                                                                                                ^
+procps/top.c:1238:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].dirty    = p->smaps.private_dirty + p->smaps.shared_dirty;
+                                   ^
+procps/top.c:1239:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].dirty_sh = p->smaps.shared_dirty;
+                                   ^
+procps/top.c:1240:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     topmem[n].stack    = p->smaps.stack;
+                                   ^
+procps/top.c:1244:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   if (ntop == 0) {
+                  ^
+procps/top.c:1251:20: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    if (!prev_hist_count) {
+                    ^
+procps/top.c:1259:21: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    qsort(top, ntop, sizeof(top_status_t), (void*)mult_lvl_cmp);
+                     ^
+procps/top.c:1259:68: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    qsort(top, ntop, sizeof(top_status_t), (void*)mult_lvl_cmp);
+                                                                    ^
+procps/top.c:1266:40: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    qsort(topmem, ntop, sizeof(topmem_status_t), (void*)topmem_sort);
+                                        ^
+procps/top.c:1266:88: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    qsort(topmem, ntop, sizeof(topmem_status_t), (void*)topmem_sort);
+                                                                                        ^
+procps/top.c:1270:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    display_process_list(G.lines, col);
+                                   ^
+procps/top.c:1273:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    display_topmem_process_list(G.lines, col);
+                                          ^
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+dhcpcd.c: In function ‘write_pid’:
+dhcpcd.c:109:2: warning: implicit declaration of function ‘dprintf’ [-Wimplicit-function-declaration]
+  return dprintf(fd, "%d\n", (int)pid);
+  ^
+script.c: In function ‘script_runreason’:
+script.c:695:8: warning: implicit declaration of function ‘strsignal’ [-Wimplicit-function-declaration]
+        __func__, argv[0], strsignal(WTERMSIG(status)));
+        ^
+if-options.c: In function ‘get_line’:
+if-options.c:1965:3: warning: implicit declaration of function ‘getline’ [-Wimplicit-function-declaration]
+   bytes = getline(buf, buflen, fp);
+   ^
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug, --enable-static, --enable-shared
+configure: WARNING: using cross tools not prefixed with host triplet
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug, --enable-static, --enable-shared
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ar: creating libtommath.a
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ar: creating libtomcrypt.a
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --enable-ipv6, --enable-debug
+configure: WARNING: using cross tools not prefixed with host triplet
+configure: WARNING: result yes guessed because of cross compilation
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --enable-ipv6, --enable-debug
+libtool: install: warning: remember to run `libtool --finish /usr/lib'
+libtool: install: warning: remember to run `libtool --finish /usr/lib'
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug, --enable-static, --enable-shared, --without-uiout, --disable-gdbtk, --without-x, --disable-sim, --disable-binutils, --disable-ld, --disable-gas, --enable-gdbserver, --with-curses, --without-included-gettext, --disable-tui, --without-python
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug, --enable-static, --enable-shared, --without-uiout, --disable-gdbtk, --without-x, --disable-sim, --disable-binutils, --disable-ld, --disable-gas, --enable-gdbserver, --with-curses, --without-included-gettext, --disable-tui, --without-python
+reg-arm.c updated.
+arm-with-vfpv2.c updated.
+arm-with-iwmmxt.c updated.
+arm-with-vfpv3.c updated.
+arm-with-neon.c updated.
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+/usr/bin/ld: total time in link: 0.061990
+/usr/bin/ld: data size 6213632
+/usr/bin/ld: total time in link: 0.058990
+/usr/bin/ld: data size 6213632
+/sbin/ldconfig.real: Can't create temporary cache file /etc/ld.so.cache~: Permission denied
+make[2]: [/group/SYSO_WS1415_12/buildroot/output/host/usr/lib/libncurses.so.5.9] Error 1 (ignored)
+/usr/bin/ld: total time in link: 0.021996
+/usr/bin/ld: data size 4022272
+/usr/bin/ld: total time in link: 0.023995
+/usr/bin/ld: data size 4022272
+/sbin/ldconfig.real: Can't create temporary cache file /etc/ld.so.cache~: Permission denied
+make[2]: [/group/SYSO_WS1415_12/buildroot/output/host/usr/lib/libpanel.so.5.9] Error 1 (ignored)
+/usr/bin/ld: total time in link: 0.023996
+/usr/bin/ld: data size 4210688
+/usr/bin/ld: total time in link: 0.024995
+/usr/bin/ld: data size 4210688
+/sbin/ldconfig.real: Can't create temporary cache file /etc/ld.so.cache~: Permission denied
+make[2]: [/group/SYSO_WS1415_12/buildroot/output/host/usr/lib/libmenu.so.5.9] Error 1 (ignored)
+/usr/bin/ld: total time in link: 0.029994
+/usr/bin/ld: data size 4435968
+/usr/bin/ld: total time in link: 0.026994
+/usr/bin/ld: data size 4435968
+/sbin/ldconfig.real: Can't create temporary cache file /etc/ld.so.cache~: Permission denied
+make[2]: [/group/SYSO_WS1415_12/buildroot/output/host/usr/lib/libform.so.5.9] Error 1 (ignored)
+1600 entries written to /group/SYSO_WS1415_12/buildroot/output/host/usr/share/terminfo
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-static
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-static
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+/group/SYSO_WS1415_12/buildroot/output/build/host-autoconf-2.69/build-aux/missing: line 51: help2man: command not found
+/group/SYSO_WS1415_12/buildroot/output/build/host-autoconf-2.69/build-aux/missing: line 51: help2man: command not found
+WARNING: 'help2man' is missing on your system.  You should only need it if
+	 you modified a dependency of a manual page.  You may need the
+	 Help2man package in order for those modifications to take
+	 effect.  You can get Help2man from any GNU archive site.
+WARNING: 'help2man' is missing on your system.  You should only need it if
+	 you modified a dependency of a manual page.  You may need the
+	 Help2man package in order for those modifications to take
+	 effect.  You can get Help2man from any GNU archive site.
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+configure: WARNING: Fortran compiler cannot create executables
+configure: WARNING: Fortran 77 compiler cannot create executables
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+install-info: warning: no info dir entry in `/group/SYSO_WS1415_12/buildroot/output/host/usr/share/info/automake-history.info'
+configure: WARNING: unrecognized options: --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-static
+configure: WARNING: unrecognized options: --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-static
+Parser/pgen.c: In function ‘compile_atom’:
+Parser/pgen.c:282:9: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+     int i;
+         ^
+Objects/classobject.c: In function ‘PyMethod_New’:
+Objects/classobject.c:2259:111: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         PyObject_INIT(im, &PyMethod_Type);
+                                                                                                               ^
+Objects/complexobject.c: In function ‘PyComplex_FromCComplex’:
+Objects/complexobject.c:238:108: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT(op, &PyComplex_Type);
+                                                                                                            ^
+Objects/floatobject.c: In function ‘PyFloat_FromDouble’:
+Objects/floatobject.c:152:106: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT(op, &PyFloat_Type);
+                                                                                                          ^
+Objects/intobject.c: In function ‘PyInt_FromLong’:
+Objects/intobject.c:110:102: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT(v, &PyInt_Type);
+                                                                                                      ^
+Objects/intobject.c: In function ‘_PyInt_Init’:
+Objects/intobject.c:1469:106: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         PyObject_INIT(v, &PyInt_Type);
+                                                                                                          ^
+Objects/methodobject.c: In function ‘PyCFunction_NewEx’:
+Objects/methodobject.c:23:114: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         PyObject_INIT(op, &PyCFunction_Type);
+                                                                                                                  ^
+Objects/stringobject.c: In function ‘PyString_FromStringAndSize’:
+Objects/stringobject.c:91:157: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT_VAR(op, &PyString_Type, size);
+                                                                                                                                                             ^
+Objects/stringobject.c: In function ‘PyString_FromString’:
+Objects/stringobject.c:146:157: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT_VAR(op, &PyString_Type, size);
+                                                                                                                                                             ^
+Objects/stringobject.c: In function ‘string_concat’:
+Objects/stringobject.c:1063:157: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT_VAR(op, &PyString_Type, size);
+                                                                                                                                                             ^
+Objects/stringobject.c: In function ‘string_repeat’:
+Objects/stringobject.c:1105:157: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT_VAR(op, &PyString_Type, size);
+                                                                                                                                                             ^
+Objects/typeobject.c: In function ‘PyType_GenericAlloc’:
+Objects/typeobject.c:774:103: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         PyObject_INIT(obj, type);
+                                                                                                       ^
+Objects/unicodeobject.c: In function ‘_PyUnicode_New’:
+Objects/unicodeobject.c:350:122: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         PyObject_INIT(unicode, &PyUnicode_Type);
+                                                                                                                          ^
+abort: repository . not found!
+abort: repository . not found!
+abort: repository . not found!
+Modules/posixmodule.o: In function `posix_tmpnam':
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/./Modules/posixmodule.c:7575: warning: the use of `tmpnam_r' is dangerous, better use `mkstemp'
+Modules/posixmodule.o: In function `posix_tempnam':
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/./Modules/posixmodule.c:7522: warning: the use of `tempnam' is dangerous, better use `mkstemp'
+Could not find platform dependent libraries <exec_prefix>
+Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/datetimemodule.c: In function ‘time_alloc’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/datetimemodule.c:616:101: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT(self, type);
+                                                                                                     ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/datetimemodule.c: In function ‘datetime_alloc’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/datetimemodule.c:631:101: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     PyObject_INIT(self, type);
+                                                                                                     ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/cPickle.c: In function ‘load’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/cPickle.c:4495:8: warning: assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]
+     if (!( (len=self->stack->length) >= x
+        ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/cPickle.c: In function ‘Unpickler_noload’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/cPickle.c:202:8: warning: assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]
+     if (clearto >= self->length) return 0;
+        ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/cPickle.c:202:8: warning: assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]
+     if (clearto >= self->length) return 0;
+        ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/socketmodule.c: In function ‘socket_gethostbyname_ex’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/socketmodule.c:3451:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+     int result;
+         ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/socketmodule.c: In function ‘socket_gethostbyaddr’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/socketmodule.c:3527:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+     int result;
+         ^
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/_ctypes/cfield.c: In function ‘PyCField_FromDesc’:
+/group/SYSO_WS1415_12/buildroot/output/build/host-python-2.7.8/Modules/_ctypes/cfield.c:50:29: warning: variable ‘length’ set but not used [-Wunused-but-set-variable]
+     Py_ssize_t size, align, length;
+                             ^
+configure: WARNING: neither ld nor gold are enabled
+*** This configuration is not supported in the following subdirectories:
+     sim
+    (Any other directories should still work fine.)
+./configure: 7998: ./configure.lineno: missing: not found
+configure: WARNING:
+*** Makeinfo is missing. Info documentation will not be built.
+configure: WARNING: decimal float is not supported for this target, ignored
+./dpd/decimal32.c: In function ‘decimal32FromNumber’:
+./dpd/decimal32.c:173:57: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+   UBFROMUI(d32->bytes, targ);    /* directly store the int */
+                                                         ^
+./dpd/decimal64.c: In function ‘decimal64FromNumber’:
+./dpd/decimal64.c:193:64: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d64->bytes,   targar[0]);
+                                                                ^
+./dpd/decimal64.c:194:66: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d64->bytes+4, targar[1]);
+                                                                  ^
+./dpd/decimal64.c:198:64: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d64->bytes,   targar[1]);
+                                                                ^
+./dpd/decimal64.c:199:66: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d64->bytes+4, targar[0]);
+                                                                  ^
+./dpd/decimal128.c: In function ‘decimal128FromNumber’:
+./dpd/decimal128.c:172:65: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes,    targlo);
+                                                                 ^
+./dpd/decimal128.c:173:67: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes+4,  targml);
+                                                                   ^
+./dpd/decimal128.c:174:67: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes+8,  targmh);
+                                                                   ^
+./dpd/decimal128.c:175:68: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes+12, targhi);
+                                                                    ^
+./dpd/decimal128.c:179:65: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes,    targhi);
+                                                                 ^
+./dpd/decimal128.c:180:67: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes+4,  targmh);
+                                                                   ^
+./dpd/decimal128.c:181:67: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes+8,  targml);
+                                                                   ^
+./dpd/decimal128.c:182:68: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+     UBFROMUI(d128->bytes+12, targlo);
+                                                                    ^
+In file included from ./regex.c:640:0:
+./regex.c: In function ‘byte_regex_compile’:
+./regex.c:3126:44: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+             bzero (b, (1 << BYTEWIDTH) / BYTEWIDTH);
+                                            ^
+In file included from ./regex.c:640:0:
+./regex.c: In function ‘byte_re_compile_fastmap’:
+./regex.c:4584:34: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+   bzero (fastmap, 1 << BYTEWIDTH);  /* Assume nothing's valid.  */
+                                  ^
+configure: WARNING: babeltrace is missing or unusable; GDB is unable to read CTF data.
+Creating observer.itmp
+Creating observer.htmp
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+WARNING: `makeinfo' is missing on your system.  You should only need it if
+         you modified a `.texi' or `.texinfo' file, or any other file
+         indirectly affecting the aspect of the manual.  The spurious
+         call might also be the consequence of using a buggy `make' (AIX,
+         DU, IRIX).  You might want to install the `Texinfo' package or
+         the `GNU make' package.  Grab either from any GNU archive site.
+WARNING: `makeinfo' is missing on your system.  You should only need it if
+         you modified a `.texi' or `.texinfo' file, or any other file
+         indirectly affecting the aspect of the manual.  The spurious
+         call might also be the consequence of using a buggy `make' (AIX,
+         DU, IRIX).  You might want to install the `Texinfo' package or
+         the `GNU make' package.  Grab either from any GNU archive site.
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+This is not dpkg install-info anymore, but GNU install-info
+See the man page for ginstall-info for command line arguments
+configure: WARNING: using cross tools not prefixed with host triplet
+configure: WARNING: using cross tools not prefixed with host triplet
+libtool: install: warning: remember to run `libtool --finish /usr/lib'
+libtool: install: warning: `../intl/libintl.la' has not been installed in `/usr/lib'
+libtool: install: warning: `../intl/libintl.la' has not been installed in `/usr/lib'
+libtool: install: warning: `../intl/libintl.la' has not been installed in `/usr/lib'
+libtool: install: warning: remember to run `libtool --finish /usr/lib'
+libtool: install: warning: `../intl/libintl.la' has not been installed in `/usr/lib'
+libtool: install: warning: `../intl/libintl.la' has not been installed in `/usr/lib'
+libtool: install: warning: `../intl/libintl.la' has not been installed in `/usr/lib'
+configure: WARNING: cross compiling: assume setvbuf params not reversed
+configure: WARNING: Assuming unsigned for type of bool
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.076987
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 7344128
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.016996
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 2543616
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.021996
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 3063808
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.029994
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 3776512
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.073988
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 7344128
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.016996
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 2543616
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.016996
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 2543616
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-/uclibcgnueabihfgroup//binlabworks//ldtoolchain:/ buildroot.gittotal/ outputtime/ hostin/ usrlink/:lib /0.021995gcc
+//armgroup-/buildrootlabworks-/linuxtoolchain-/uclibcgnueabihfbuildroot.git//4.9.2output//.host.//usr./.lib//.gcc.//arm.-.buildroot/-armlinux--buildrootuclibcgnueabihf-/linux4.9.2-/uclibcgnueabihf./.bin//.ld.:/ .total. /time. .in/ armlink-:buildroot -0.022996linux
+-/uclibcgnueabihfgroup//binlabworks//ldtoolchain:/ buildroot.gitdata/ outputsize/host/ usr3063808/
+lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 3063808
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.026994
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 3776512
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: total time in link: 0.025995
+/group/labworks/toolchain/buildroot.git/output/host/usr/lib/gcc/arm-buildroot-linux-uclibcgnueabihf/4.9.2/../../../../arm-buildroot-linux-uclibcgnueabihf/bin/ld: data size 3776512
+1600 entries written to /group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/share/terminfo
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ar: creating ../libcrypto.a
+md5_dgst.c: In function ‘md5_block_data_order’:
+md5_dgst.c:109:162: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  HOST_c2l(data,l); X( 0)=l;  HOST_c2l(data,l); X( 1)=l;
+                                                                                                                                                                  ^
+md5_dgst.c:109:335: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  HOST_c2l(data,l); X( 0)=l;  HOST_c2l(data,l); X( 1)=l;
+                                                                                                                                                                                                                                                                                                                                               ^
+md5_dgst.c:111:281: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(A,B,C,D,X( 0), 7,0xd76aa478L); HOST_c2l(data,l); X( 2)=l;
+                                                                                                                                                                                                                                                                                         ^
+md5_dgst.c:112:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(D,A,B,C,X( 1),12,0xe8c7b756L); HOST_c2l(data,l); X( 3)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:113:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(C,D,A,B,X( 2),17,0x242070dbL); HOST_c2l(data,l); X( 4)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:114:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(B,C,D,A,X( 3),22,0xc1bdceeeL); HOST_c2l(data,l); X( 5)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:115:281: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(A,B,C,D,X( 4), 7,0xf57c0fafL); HOST_c2l(data,l); X( 6)=l;
+                                                                                                                                                                                                                                                                                         ^
+md5_dgst.c:116:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(D,A,B,C,X( 5),12,0x4787c62aL); HOST_c2l(data,l); X( 7)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:117:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(C,D,A,B,X( 6),17,0xa8304613L); HOST_c2l(data,l); X( 8)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:118:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(B,C,D,A,X( 7),22,0xfd469501L); HOST_c2l(data,l); X( 9)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:119:281: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(A,B,C,D,X( 8), 7,0x698098d8L); HOST_c2l(data,l); X(10)=l;
+                                                                                                                                                                                                                                                                                         ^
+md5_dgst.c:120:283: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(D,A,B,C,X( 9),12,0x8b44f7afL); HOST_c2l(data,l); X(11)=l;
+                                                                                                                                                                                                                                                                                           ^
+md5_dgst.c:121:284: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(C,D,A,B,X(10),17,0xffff5bb1L); HOST_c2l(data,l); X(12)=l;
+                                                                                                                                                                                                                                                                                            ^
+md5_dgst.c:122:284: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(B,C,D,A,X(11),22,0x895cd7beL); HOST_c2l(data,l); X(13)=l;
+                                                                                                                                                                                                                                                                                            ^
+md5_dgst.c:123:282: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(A,B,C,D,X(12), 7,0x6b901122L); HOST_c2l(data,l); X(14)=l;
+                                                                                                                                                                                                                                                                                          ^
+md5_dgst.c:124:284: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+  R0(D,A,B,C,X(13),12,0xfd987193L); HOST_c2l(data,l); X(15)=l;
+                                                                                                                                                                                                                                                                                            ^
+x509_vfy.c: In function ‘check_revocation’:
+x509_vfy.c:687:6: warning: ‘ok’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if (!ok) return ok;
+      ^
+libcrypto.a(b_sock.o): In function `BIO_gethostbyname':
+/group/SYSO_WS1415_12/buildroot/output/build/openssl-1.0.1j/crypto/bio/b_sock.c:383: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ar: creating ../libssl.a
+libcrypto.a(b_sock.o): In function `BIO_gethostbyname':
+/group/SYSO_WS1415_12/buildroot/output/build/openssl-1.0.1j/crypto/bio/b_sock.c:383: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+./libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+../../libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+libcrypto.a(b_sock.o): In function `BIO_gethostbyname':
+/group/SYSO_WS1415_12/buildroot/output/build/openssl-1.0.1j/crypto/bio/b_sock.c:383: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+libcrypto.a(b_sock.o): In function `BIO_gethostbyname':
+/group/SYSO_WS1415_12/buildroot/output/build/openssl-1.0.1j/crypto/bio/b_sock.c:383: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+./libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+libcrypto.a(b_sock.o): In function `BIO_gethostbyname':
+/group/SYSO_WS1415_12/buildroot/output/build/openssl-1.0.1j/crypto/bio/b_sock.c:383: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+libcrypto.a(b_sock.o): In function `BIO_gethostbyname':
+/group/SYSO_WS1415_12/buildroot/output/build/openssl-1.0.1j/crypto/bio/b_sock.c:383: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+./libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug, --enable-static, --enable-shared
+configure: WARNING: cross compiling: cannot test
+configure: WARNING: cross compiling: not checking compiler sanity
+configure: WARNING: cross compiling: not checking zlib version
+configure: WARNING: cross compiling: assuming BROKEN_ONE_BYTE_DIRENT_D_NAME
+configure: WARNING: cross compiling: not checking setresuid
+configure: WARNING: cross compiling: not checking setresuid
+configure: WARNING: cross compiling: Assuming working snprintf()
+configure: WARNING: cross compiling: Assuming working vsnprintf()
+configure: WARNING: cross compiling: not checking
+configure: WARNING: cross compiling: not checking
+configure: WARNING: cross compiling: not checking
+configure: WARNING: cross-compiling: assuming yes
+configure: WARNING: cross compiling: assuming yes
+configure: WARNING: cross compiling: assuming yes
+configure: WARNING: cross compiling: assuming yes
+configure: WARNING: cross compiling: assuming yes
+configure: WARNING: cross compiling: Assuming working snprintf()
+configure: WARNING: cross compiling: use --with-maildir=/path/to/mail
+configure: WARNING: cross compiling: Disabling /dev/ptmx test
+configure: WARNING: cross compiling: Disabling /dev/ptc test
+configure: WARNING: cross compiling: not checking /etc/default/login
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug, --enable-static, --enable-shared
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ar: creating libopenbsd-compat.a
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ar: creating libssh.a
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+/group/SYSO_WS1415_12/buildroot/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/usr/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+make[1]: /group/SYSO_WS1415_12/buildroot/output/target/usr/sbin/sshd: Command not found
+make[1]: [check-config] Error 127 (ignored)
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug
+configure: WARNING: using cross tools not prefixed with host triplet
+configure: WARNING: Replacing missing/broken (v)snprintf() with sudo's version.
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --disable-dependency-tracking, --enable-ipv6, --enable-debug
+configure: WARNING: unrecognized options: --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --enable-ipv6, --enable-debug, --disable-arch, --disable-ddate
+configure: WARNING: using cross tools not prefixed with host triplet
+configure: WARNING:
+  You will not be able to create source packages with 'make dist'
+  because gtk-doc >= 1.10 is not found.
+configure: WARNING: libcap-ng library not found; not building setpriv
+configure: WARNING: PAM header file not found; not building runuser
+configure: WARNING: schedutils disabled; not building ionice
+configure: WARNING: schedutils disabled; not building taskset
+configure: WARNING: schedutils disabled; not building chrt
+configure: WARNING: libpython not found; not building pylibmount
+configure: WARNING: unrecognized options: --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop, --enable-ipv6, --enable-debug, --disable-arch, --disable-ddate
+libblkid/src/llseek.c:12:0: warning: "_LARGEFILE_SOURCE" redefined
+ #define _LARGEFILE_SOURCE
+ ^
+<command-line>:0:0: note: this is the location of the previous definition
+libblkid/src/llseek.c:13:0: warning: "_LARGEFILE64_SOURCE" redefined
+ #define _LARGEFILE64_SOURCE
+ ^
+<command-line>:0:0: note: this is the location of the previous definition
+disk-utils/fdisk.c: In function ‘ask_callback’:
+disk-utils/fdisk.c:194:29: warning: ‘num’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if (rc == 0 && num >= low && num <= high)
+                             ^
+disk-utils/fdisk.c:175:12: note: ‘num’ was declared here
+   uint64_t num;
+            ^
+sys-utils/ctrlaltdel.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/fsfreeze.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/colcrt.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/rev.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/ul-ul.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/renice.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/setarch.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/setsid.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/logger-logger.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/look.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/namei.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/getopt.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/readprofile.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/fdformat.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/more-more.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/mkfs.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/mkfs.bfs.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/blockdev.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/sfdisk.o: In function `outer_extended_partition':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/col.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/colrm.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/column.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/hexdump.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/tailf.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+term-utils/script.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+text-utils/pg-pg.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+term-utils/scriptreplay.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+term-utils/setterm-setterm.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/flock.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/ipcmk.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/ipcrm.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/ipcs.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/nsenter.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/cal-cal.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/mcookie.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/whereis.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/uuidgen-uuidgen.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/isosize.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/ldattach.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/rtcwake.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/dmesg.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+libblkid/src/.libs/libblkid_la-evaluate.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/kill.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/blkdiscard.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/chcpu.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/hwclock.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/fsck.minix.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/mkfs.minix.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+login-utils/lslogins-lslogins.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/prlimit-prlimit.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/lscpu-lscpu.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/wdctl-wdctl.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+./.libs/libblkid.so: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/blkid-blkid.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/findfs-findfs.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/wipefs-wipefs.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/mkswap-mkswap.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/swaplabel-swaplabel.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/fdisk-fdisk.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+disk-utils/cfdisk-cfdisk.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/lslocks-lslocks.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/mountpoint-mountpoint.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/lsblk-lsblk.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/fstrim-fstrim.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/swapon-swapon.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+misc-utils/findmnt-findmnt.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+sys-utils/swapoff-swapoff.o: In function `close_stream':
+/group/SYSO_WS1415_12/buildroot/output/build/util-linux-2.25.2/./include/closestream.h:24: warning: This version of __fpending returns bytes remaining in buffer for both narrow and wide streams.  glibc's version returns wide chars in buffer for the wide stream case.
+libtool: install: warning: remember to run `libtool --finish /usr/lib'
+libtool: install: warning: remember to run `libtool --finish /usr/lib'
+configure: WARNING: unrecognized options: --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop
+configure: WARNING:
+  You will not be able to create source packages with 'make dist'
+  because gtk-doc >= 1.14 is not found.
+configure: WARNING: unrecognized options: --disable-doc, --disable-docs, --disable-documentation, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+arch/arm/kernel/return_address.c:63:2: warning: #warning "TODO: return_address should use unwind tables" [-Wcpp]
+ #warning "TODO: return_address should use unwind tables"
+  ^
+drivers/tty/serial/8250/8250_core.c: In function ‘serial8250_shutdown’:
+drivers/tty/serial/8250/8250_core.c:1713:18: warning: ‘i’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  if (list_empty(i->head))
+                  ^
+drivers/tty/serial/8250/8250_core.c:1696:19: note: ‘i’ was declared here
+  struct irq_info *i;
+                   ^
+find: `/group/SYSO_WS1415_12/buildroot/output/target/usr/lib/perl5/': No such file or directory
+find: `/group/SYSO_WS1415_12/buildroot/output/target/usr/lib/perl5/': No such file or directory
+find: `/group/SYSO_WS1415_12/buildroot/output/target/usr/lib/perl5/': No such file or directory
+make: [target-finalize] Error 1 (ignored)
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ldconfig: /usr/lib/libstdc++.so.6.0.20-gdb.py is not a shared library, skipping
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ldconfig: can't resolve /usr/X11R6/lib in chroot .: No such file or directory
+/group/SYSO_WS1415_12/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabihf-ldconfig: skipping /usr/X11R6/lib: No such file or directory
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+configure: WARNING: unrecognized options: --disable-gtk-doc, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+libfakeroot.c: In function ‘fts_read’:
+libfakeroot.c:1583:21: warning: passing argument 1 of ‘send_get_stat64’ from incompatible pointer type
+     SEND_GET_STAT64(r->fts_statp, _STAT_VER);
+                     ^
+In file included from libfakeroot.c:60:0:
+communicate.h:191:13: note: expected ‘struct stat64 *’ but argument is of type ‘struct stat *’
+ extern void send_get_stat64(struct stat64 *buf);
+             ^
+libfakeroot.c: In function ‘fts_children’:
+libfakeroot.c:1606:23: warning: passing argument 1 of ‘send_get_stat64’ from incompatible pointer type
+       SEND_GET_STAT64(r->fts_statp, _STAT_VER);
+                       ^
+In file included from libfakeroot.c:60:0:
+communicate.h:191:13: note: expected ‘struct stat64 *’ but argument is of type ‘struct stat *’
+ extern void send_get_stat64(struct stat64 *buf);
+             ^
+fakeroot: FAKEROOTKEY set to 1924205173
+fakeroot: nested operation not yet supported
+make: *** [/group/SYSO_WS1415_12/buildroot/output/images/rootfs.cpio] Error 1
+fakeroot: FAKEROOTKEY set to 1924205173
+fakeroot: nested operation not yet supported
